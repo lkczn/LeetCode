@@ -1,0 +1,19 @@
+Given an array of integers nums and a target value, you can find the two integers that sum to the target value in the array and return their array subscripts.
+
+class Solution { 
+    public int[] twoSum(int[] nums, int target) { 
+        int val1 =0; 
+        int val2 =0; 
+        for (int i = 0; i < nums.length; i++) { 
+            for (int j = (nums.length - 1); j > i; j--) 
+            { 
+                if (nums[i] + nums[j] == target) { 
+                val1 = i; val2 = j; 
+                    break; 
+                }
+             
+            }
+        } 
+        return new int[] { val1, val2 }; 
+    }
+}
